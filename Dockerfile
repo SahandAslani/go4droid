@@ -59,9 +59,9 @@ RUN mkdir $GOPHER/bin \
 
 # Get Go stable release
 WORKDIR $GOPHER
-RUN curl -O https://storage.googleapis.com/golang/go1.11.1.linux-amd64.tar.gz
-RUN echo '2871270d8ff0c8c69f161aaae42f9f28739855ff5c5204752a8d92a1c9f63993  go1.11.1.linux-amd64.tar.gz' | sha256sum -c
-RUN tar -xzf go1.11.1.linux-amd64.tar.gz
+RUN curl -O https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
+RUN echo '542e936b19542e62679766194364f45141fde55169db2d8d01046555ca9eb4b8  go1.16.2.linux-amd64.tar.gz' | sha256sum -c
+RUN tar -xzf go1.16.2.linux-amd64.tar.gz
 ENV GOPATH $GOPHER
 ENV GOROOT $GOPHER/go
 ENV PATH $PATH:$GOROOT/bin:$GOPHER/bin
